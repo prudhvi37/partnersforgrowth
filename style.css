@@ -1,0 +1,140 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+#header{
+  background-color: #262626;
+  position: fixed;
+  width: 100%;
+  transition: height .3s; 
+  opacity: 0.9;
+}
+#header ul{
+  list-style: none;
+  margin-left: auto;  
+  transition: padding .3s linear; 
+}
+
+#header ul a{
+  text-decoration: none;
+  color: white;
+  font-family: abel;
+  font-weight: 100;
+  font-size: 23px;
+}
+
+#header ul li{
+  padding: 0px 22px;
+}
+#logo img{
+  max-width: 372px;
+  max-height: 220px;
+  padding-top:0;
+   
+}
+
+#logo img
+{
+    width: 100%;
+    transition:width  .3s ease;
+    -moz-transition: width .3s ease;
+    -ms-transition: width .3s ease;
+    -webkit-transition: width .3s ease;
+    -o-transition: width .3s ease;
+}
+
+
+#hero-content{
+    height: 100vh;
+    width: 100%;
+    display: table;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;    
+    background-repeat:no-repeat;
+    
+}
+.hero-content {  
+  display: table-cell;
+  vertical-align: middle;
+  color: black;
+    font-family: abel;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+#bars{
+  position: relative;
+}
+
+
+/*media quries for Laptop and above*/
+
+@media (min-width: 1025px) {
+  #header{
+    display: flex;
+    height: 91px;
+    transition: width .3s; 
+  }
+  #header ul{
+    display: flex;
+    padding-top: 27px;
+  }
+  #logo img{
+    padding: 8px 0 0 19px;    
+  }
+  
+}
+
+@media (min-width: 768px) {
+  #bars{
+    display: none;
+  }
+  
+}
+/*media quries for tablet*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #header{
+    text-align: center;  
+    height: 132px;
+  }
+  
+  #header ul{
+     display: flex;
+     justify-content: space-around; 
+     transition: padding .3s linear;
+  }
+     
+}
+
+
+@media (min-width: 320px) and (max-width: 768px){
+  #bars{
+    padding: 0px 23px;
+    font-size: 23px;
+    color: white;
+    top: -9px;
+    text-align: end;
+}
+
+  #logo img{
+      width: 172px;
+  }
+  #logo{
+    text-align: center
+  }
+  #navigation{
+  display: none;
+  justify-content: space-around;
+  transition-delay: 5s;
+}
+  #header ul li {
+  padding: 0px;
+}
+#header ul a {
+  font-size: 17px;
+}
+}
