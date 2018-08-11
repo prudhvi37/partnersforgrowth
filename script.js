@@ -27,7 +27,7 @@ function Scroll(){
       image.style.width = '';
     }
     if (yaxis > 580){
-      headColor.style.backgroundColor = "#c2e3e4"; 
+      headColor.style.backgroundColor = "darkgoldenrod"; 
       anchors.style.color = "white";
       anchors.style.transitionDelay = ".2s fade-in";
     }else{
@@ -45,7 +45,8 @@ function myClick(){
   }else{
     document.getElementById('navigation').style.display = "flex";
     document.getElementById('navigation').style.transition = "padding .3s linear;";
-    document.getElementById('navigation').style.padding = "20px 15px";
+    //document.getElementById('navigation').style.padding = "20px 15px";
+    document.getElementById('navigation').style.backgroundColor = "silver";
   }  
 }
 
