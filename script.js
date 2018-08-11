@@ -4,6 +4,8 @@ function Scroll(){
     var header = document.getElementById('header');
     var yaxis = window.scrollY;
     var image = document.getElementById('image');
+    var anchors = document.querySelectorAll('anchor');
+    var headColor = document.getElementById('header')
     var navigation = document.getElementById('navigation');
     var laptop = window.matchMedia("only screen and (min-width: 1025px)");
     var tabletMin = window.matchMedia("only screen and (min-width:768px)");
@@ -12,20 +14,25 @@ function Scroll(){
     if (laptop.matches && yaxis > 150){
       header.style.height = '65px';
       navigation.style.paddingTop = '15px';
-      image.style.width = '300px';
-     
+      image.style.width = '150px';
     }
     else if(tabletMin.matches && tabletMax.matches && yaxis > 150){
       header.style.height = '90px';
-      image.style.width = '300px';
-      
+      image.style.width = '100px';
+       
     }
     else{
       header.style.height = '';
       navigation.style.paddingTop = '';
       image.style.width = '';
     }
-
+    if (yaxis > 580){
+      headColor.style.backgroundColor = "#c2e3e4"; 
+      anchors.style.color = "white";
+      anchors.style.transitionDelay = ".2s fade-in";
+    }else{
+      headColor.style.backgroundColor = "";
+    }
 
 }
 window.addEventListener("scroll",Scroll);
