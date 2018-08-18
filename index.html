@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Partners for Growth-..........</title>
+  <title>Partners for Growth-We make partners</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   <link href="https://fonts.googleapis.com/css?family=Abel|Medula+One" rel="stylesheet" type="text/css">
@@ -14,17 +14,18 @@
 <body>
     <div id="header">
         <div id="logo">
-          <img id ="image" src="logo.gif">
+          <img class="image" id ="image" src="logo.gif">
+          <img id="image1"  src="logo-bg.gif">
         </div>
         <div id="bars" onclick="myClick()">
             <i class="fa fa-bars" id="bar"></i>
           </div>
-        <ul id="navigation">
-            <li><a href="#" id="anchor">Home</a></li>
-            <li><a href="#hero-about" id="anchor">About Us</a></li>
-            <li><a href="#Services" id="anchor">Service</a></li>
-            <li><a href="#" id="anchor">Clients</a></li>
-            <li><a href="#" id="anchor">Products</a></li>
+        <ul id="navigation" class="navigation">
+            <li><a href="#" id="anchor" class="anchor">Home</a></li>
+            <li><a href="#hero-about" id="anchor" class="anchor">About Us</a></li>
+            <li><a href="#Services" id="anchor" class="anchor">Service</a></li>
+            <li><a href="http://www.thepartnerapps.com/" id="anchor" class="anchor">Products</a></li>
+            <li><a href="#" id="anchor" onclick="showForm()" class="anchor">Contact us</a></li>
         </ul>
     </div>
     
@@ -49,8 +50,26 @@
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                 </p>
                 <div id="hero-about-buttons">
-                    <button type="button" id="about-button" class="btn btn-info">Mission and Vision</button>
-                    <button type="button" id="about-button" class="btn btn-info">Management Team</button>
+                    <button type="button" id="modal-button-mission" class="btn btn-info" onclick="model(0)">Mission and Vision</button>
+                        <div id="mission-modal">
+                            <div id="modal-container">
+                                <span class="close" id='close'>&times;</span>
+                                <h4 class="modal-head">Our Mission</h4>                                
+                                <p class="modal-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quidem ratione vero! Ratione corrupti doloribus, quia consequuntur, amet ut tempora consequatur porro blanditiis eaque nobis corporis nostrum aliquam quas facere!,Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur illum eius quisquam, atque porro quasi! Omnis eligendi corrupti voluptas non vitae tempore distinctio? Tempore ab provident possimus maxime eligendi totam.
+                                </p>
+                            </div>
+                        </div>
+                    <button type="button" id="modal-button-management" class="btn btn-info" onclick="model(1)">Management Team</button>
+                        <div id="management-modal">
+                            <div id="modal-container">
+                                <span class="close" id='close1'>&times;</span>
+                                <h4 class="modal-head">Our Team Management</h4>
+                                <p class="modal-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quidem ratione vero! Ratione corrupti doloribus, quia consequuntur, amet ut tempora consequatur porro blanditiis eaque nobis corporis nostrum aliquam quas facere!,Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur illum eius quisquam, atque porro quasi! Omnis eligendi corrupti voluptas non vitae tempore distinctio? Tempore ab provident possimus maxime eligendi totam.
+                                </p>
+                            </div>
+                    </div>
                 </div>    
             </div>  
             
@@ -92,6 +111,35 @@
                       </div>
                   </div>  
               </div>      
+    </div>
+
+    <div class="contact-form" id="contact-form">
+        <form class="form" id="form">
+            <div id="contact-head">
+                <span class="close" id='close' onclick="closeform()">&times;</span>
+                <p>Contact us using below form</p>
+            </div>    
+                <div class="first-fields" id="first-fields">
+                    <label for="name" class="label">
+                        <input type="text" id="text" name="text" placeholder="Enter your name">
+                    </label>
+                    <label for="email" class="label">
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                    </label>
+                    <label for="tel" class="label">
+                        <input type="tel" id="tel" name="tel" placeholder="Enter your contact number">
+                    </label>
+                    <label for="subject" class="label">
+                        <input type="text" id="text" name="text" placeholder="Enter your subject">
+                    </label>
+                </div>
+                <div class="second-fields" id="second-fields">
+                    <label for="comment">
+                        <textarea placeholder="Enter you Message" name="comment" id="comment" required="required"></textarea>
+                    </label>        
+                </div>
+                <button type="button" class="btn btn-success">Submit</button>        
+        </form>
     </div>
 
     <div id="footer">
