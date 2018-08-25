@@ -105,11 +105,75 @@ h2{
 #hero-services{
   margin: 0 0 80px 0;
 }
-#footer{
+#footer {
   background: #365454;
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  justify-content: center;  
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100%;
+  padding: 37px 0;
+    text-align: center;
+}
+
+.footer-head{
+  border-bottom: 1px solid gainsboro;
+}
+
+.foot{
+  margin: 0 auto;
+}
+.footer-content{
+  padding: 7px 0;
+}
+.fa {
+    font-size: 18px;
+    width: 42px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 11px 0px;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
 }
 
 #mission-modal, #management-modal{
@@ -155,9 +219,43 @@ h2{
 
 #hero-about-content{
   text-align: center;
+  
 }
 
 
+.first-fields input,.second-fields textarea{
+  border: none;
+  font-family: abel;
+  border-bottom: 1px solid bisque;
+}
+
+.first-fields input:focus, .second-fields textarea:focus{
+    border-bottom: 1px solid cadetblue;
+    box-shadow: 1px 1px cadetblue;
+    outline:none;
+    transition-delay: 0.1999s;
+}
+
+.form{
+  padding: 12px;
+}
+
+
+
+.contact-form{
+  position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    /* margin: 0 84px; */
+    text-align: center;
+    top: 0;
+    left: 0;
+    /* transform: translate(0%, 39%); */
+    z-index: 5;
+    padding: 20px 35px;
+    width: 100%;
+    display: none;
+    height: 100%;
+}
 
 /*media quries for Laptop and above*/
 
@@ -196,7 +294,7 @@ h2{
     justify-content: center;
     align-items: center;
     padding: 7% 0%;
-    background-color: #f7f4eb;
+    background-color: #f1f2f7;
   }
   #hero-we{
     max-width: 18vw;
@@ -218,20 +316,7 @@ h2{
   max-width: 37vw;
 }
 
-.contact-form{
-  position: fixed;
-    background-color: rgba(0,0,0,0.5);
-    /* margin: 0 84px; */
-    text-align: center;
-    top: 0;
-    left: 0;
-    /* transform: translate(0%, 39%); */
-    z-index: 5;
-    padding: 20px 35px;
-    width: 100%;
-    display: none;
-    height: 100%;
-}
+
 .form{
   max-width: 75%;
     margin: 10% auto;
@@ -296,11 +381,12 @@ h2{
 }
 #header ul a {
   font-size: 17px;
+  font-weight: 600;
 }
 #hero-about{
   padding: 25px 19px;
   text-align: center;
-  background-color: #ece5e5;
+  background-color: #f1f2f7;
 }
 #we-image{
   display: none;
@@ -322,14 +408,13 @@ h2{
   top: -38px;
   right: 22px;
 }
-
-
 #form{
-  max-width: 70%;
+  min-width: 70%;
   margin: 0 auto;
   text-align: center;
   background-color: aliceblue;
   padding: 12px 22px;
+  height:98%;
 }
 .label input{
   width: 57vw;
@@ -340,10 +425,26 @@ h2{
   
 }
 
-
 }
 
+@media (min-width: 320px) and (max-width: 686px){
+  #footer{
+    display: block;
+  }
+  .footer-head{
+    font-size: 12px;
+      border-bottom: 1px solid gainsboro;
+  }
+  
+  .footer-content{
+    max-width: 151px;
+    margin: 0 auto;
+  }
+  .footer-content .fa{
+    margin: 2px;
+  }
 
+}
 
 
 
