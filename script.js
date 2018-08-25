@@ -31,26 +31,35 @@ function Scroll(){
     }
     if (laptop.matches && yaxis > 580){
       headColor.style.backgroundColor = "#424040";
-      document.getElementsByClassName('anchor')[0].style.color= "white";
-      document.getElementsByClassName('anchor')[1].style.color= "white";
-      document.getElementsByClassName('anchor')[2].style.color= "white";
-      document.getElementsByClassName('anchor')[3].style.color= "white";
-      document.getElementsByClassName('anchor')[4].style.color= "white";      
+      for(i=0; i < anchors.length; i++){
+        anchors[i].style.color = "white";
+      }
+      // document.getElementsByClassName('anchor')[0].style.color= "white";
+      // document.getElementsByClassName('anchor')[1].style.color= "white";
+      // document.getElementsByClassName('anchor')[2].style.color= "white";
+      // document.getElementsByClassName('anchor')[3].style.color= "white";
+      // document.getElementsByClassName('anchor')[4].style.color= "white";      
     }else if(smalldevice.matches && tabletMax.matches && yaxis > 580){
-      headColor.style.backgroundColor = "rgb(189, 177, 177)";
-      document.getElementsByClassName('anchor')[0].style.color= "white";
-      document.getElementsByClassName('anchor')[1].style.color= "white";
-      document.getElementsByClassName('anchor')[2].style.color= "white";
-      document.getElementsByClassName('anchor')[3].style.color= "white";
-      document.getElementsByClassName('anchor')[4].style.color= "white"; 
+      
+      // for(i=0; i < anchors.length; i++){
+      //   anchors[i].style.color = "white";
+      // }
+      // document.getElementsByClassName('anchor')[0].style.color= "white";
+      // document.getElementsByClassName('anchor')[1].style.color= "white";
+      // document.getElementsByClassName('anchor')[2].style.color= "white";
+      // document.getElementsByClassName('anchor')[3].style.color= "white";
+      // document.getElementsByClassName('anchor')[4].style.color= "white"; 
     }    
     else{
       headColor.style.backgroundColor = "";
-      document.getElementsByClassName('anchor')[0].style.color= "";
-      document.getElementsByClassName('anchor')[1].style.color= "";
-      document.getElementsByClassName('anchor')[2].style.color= "";
-      document.getElementsByClassName('anchor')[3].style.color= "";
-      document.getElementsByClassName('anchor')[4].style.color= ""; 
+      for(i=0; i < anchors.length; i++){
+        anchors[i].style.color = "";
+      }
+      // document.getElementsByClassName('anchor')[0].style.color= "";
+      // document.getElementsByClassName('anchor')[1].style.color= "";
+      // document.getElementsByClassName('anchor')[2].style.color= "";
+      // document.getElementsByClassName('anchor')[3].style.color= "";
+      // document.getElementsByClassName('anchor')[4].style.color= ""; 
     }
     if (laptop.matches && yaxis > 580){
       logoimage1.style.width = '205px';
@@ -75,7 +84,7 @@ function myClick(){
     document.getElementById('navigation').style.display = "flex";
     document.getElementById('navigation').style.transition = "padding .3s linear;";
     //document.getElementById('navigation').style.padding = "20px 15px";
-    document.getElementById('navigation').style.backgroundColor = "silver";
+    document.getElementById('navigation').style.backgroundColor = "palegoldenrod";
   }  
 }
 
@@ -84,7 +93,7 @@ function myClick(){
 
 /* Random background image generate */
 var image = document.getElementById('hero-content');
-var randombgs = ['backgroundimage-one-min.jpg', 'backgroundimage-two-min.jpg', 'backgroundimage-three-min.jpg', 'backgroundimage-four-min.jpg'];
+var randombgs = ['backgroundimage-one_opt.jpg', 'backgroundimage-two_opt.jpg', 'backgroundimage-three_opt.jpg', 'backgroundimage-four_opt.jpg'];
       let randNum = Math.floor(Math.random()*randombgs.length);
       let randSelect = "\'" + randombgs[randNum] + "\'";
       image.style.backgroundImage= 'url(' + randSelect + ')';
@@ -146,3 +155,7 @@ var randombgs = ['backgroundimage-one-min.jpg', 'backgroundimage-two-min.jpg', '
       function closeform(){
         document.getElementById('contact-form').style.display = "none";
       }
+
+
+
+
