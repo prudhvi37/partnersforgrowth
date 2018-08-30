@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Partners for Growth-We make partners</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="stylee.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   
 <!--[if IE 8]>
 	<link rel="stylesheet" type="text/css" href="ie.css" />
@@ -21,9 +21,9 @@
 </head>
 <body>
     <div id="header">
-        <div id="logo">
-          <img class="image" id ="image" src="logo.gif">
-          <img id="image1"  src="logo-bg.gif">
+        <div id="logo" >
+          <a href="."><img class="image" id ="image" src="logo.gif"></a>
+          <a href="."><img id="image1"  src="logo-bg.gif"></a>
         </div>
         <div id="bars" onclick="myClick()">
             <i class="fa fa-bars" id="bar"></i>
@@ -38,7 +38,7 @@
     </div>
     
     <div id="hero-content">
-        <div class="hero-content">
+        <div class="hero-content"  data-scroll-reveal="enter top over 1s">
             <h1>Partners for Growth</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
       </div>   
@@ -46,11 +46,11 @@
 
     <div id="about">
       <div id="hero-about">
-            <div id="hero-we">
+            <div id="hero-we" data-scroll-reveal="enter left and move 50px over 1s">
                 <h2 class="hero-header">Who we are</h2>
                 <img id="we-image" src="we.png">
             </div>  
-            <div id="hero-about-content">
+            <div id="hero-about-content" data-scroll-reveal="enter right and move 50px over 1s">
                 <h2>Over View</h2>
                 <p id="hero-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -89,28 +89,28 @@
                       <h2 class="hero-header">What we can do</h2>
                   </div>  
                   <div id="service">
-                      <div class="services-content">
+                      <div class="services-content" data-scroll-reveal="enter left and move 50px over 1s">
                         <h>Business Solutions</h><hr>   
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p> 
                       </div>
-                      <div class="services-content">
+                      <div class="services-content" data-scroll-reveal="enter left and move 50px over 1s">
                             <h>Mobile Applications</h><hr>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             </p>  
                       </div>
-                      <div class="services-content">
+                      <div class="services-content" data-scroll-reveal="enter right and move 50px over 1s">
                             <h>IT Services and Solutions</h><hr>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             </p>    
                       </div>
-                      <div class="services-content">
+                      <div class="services-content" data-scroll-reveal="enter right and move 50px over 1s">
                             <h>Technology Consulting</h> <hr>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -180,6 +180,11 @@
         </div>
     </div>
    
-    <script src="scriptt.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript" src='scrollreveal.min.js'></script>
+
+      <script>
+          window.scrollReveal = new scrollReveal();
+    </script>
 </body>
 </html>
