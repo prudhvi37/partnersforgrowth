@@ -10,7 +10,7 @@ h2{
   position: fixed;
   width: 100%;
   transition: height .3s; 
-  
+  z-index: 10;
 }
 #header ul{
   list-style: none;
@@ -105,12 +105,19 @@ h2{
 #hero-services{
   margin: 0 0 80px 0;
 }
+
+form label input{
+  font-family: "Work Sans", sans-serif !important;
+}
+form label textarea{
+  font-family: "Work Sans", sans-serif !important;
+} 
+
 #footer {
   background: #365454;
   display: inline-flex;
   width: 100%;
   justify-content: center;
-  align-items: center;
   color: white;
   height: 100%;
   padding: 37px 0;
@@ -196,6 +203,8 @@ h2{
   color: white;
   width: 81%;
   margin: 15% auto;
+  max-height: calc(100vh - 125px);
+  overflow-y: auto;
 }
 .modal-head{
   background-color: white;
@@ -415,6 +424,7 @@ h2{
   background-color: aliceblue;
   padding: 12px 22px;
   height:98%;
+  max-height: calc(100vh - 114px);
 }
 .label input{
   width: 57vw;
@@ -424,7 +434,12 @@ h2{
   height: 25vh;
   
 }
-
+#mission-modal{
+  top:56px;
+}
+.contact-form{
+  top:109px;
+}
 }
 
 @media (min-width: 320px) and (max-width: 686px){
